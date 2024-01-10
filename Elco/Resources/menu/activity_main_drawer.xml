@@ -5,34 +5,41 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/menu_dashboard24px"
+            android:title="Dashboard" />
+		 <item
+            android:id="@+id/nav_announcement"
+            android:icon="@drawable/menu_campaign24px"
+            android:title="Announcements" />
+		<item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/menu_calendar_month24px"
+            android:title="Events" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_account"
+            android:icon="@drawable/menu_person24px"
+            android:title="My Account" />
+	     <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/menu_setting24px"
+            android:title="Settings" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Help">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_community_forum"
+                android:icon="@drawable/menu_forum24px"
+                android:title="Community Forum" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_help_center"
+                android:icon="@drawable/menu_help_center24px"
+                android:title="Help Center" />
+            <item
+                android:id="@+id/nav_report_bug"
+                android:icon="@drawable/menu_bug_report24px"
+                android:title="Report a Bug" />
         </menu>
     </item>
-
 </menu>

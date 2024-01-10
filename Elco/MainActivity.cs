@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -13,7 +14,7 @@ using Google.Android.Material.Snackbar;
 
 namespace Elco
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "Main Activity", Theme = "@style/AppTheme.NoActionBar")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -77,27 +78,26 @@ namespace Elco
         {
             int id = item.ItemId;
 
-            if (id == Resource.Id.nav_camera)
+            if (id == Resource.Id.nav_dashboard)
             {
-                // Handle the camera action
+                Intent intent = new Intent(this, typeof(ActivityDashboard));
+                StartActivity(intent);
+                return true;
             }
-            else if (id == Resource.Id.nav_gallery)
-            {
-
-            }
-            else if (id == Resource.Id.nav_slideshow)
+            else if (id == Resource.Id.nav_setting)
             {
 
             }
-            else if (id == Resource.Id.nav_manage)
+
+            else if (id == Resource.Id.nav_community_forum)
             {
 
             }
-            else if (id == Resource.Id.nav_share)
+            else if (id == Resource.Id.nav_help_center)
             {
 
             }
-            else if (id == Resource.Id.nav_send)
+            else if (id == Resource.Id.nav_report_bug)
             {
 
             }
