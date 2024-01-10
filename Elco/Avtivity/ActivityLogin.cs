@@ -2,12 +2,8 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Elco
 {
@@ -22,15 +18,21 @@ namespace Elco
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_login);
-
+            // Initialize Xamarin Essentials for platform-specific functionality
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             etUsername = FindViewById<EditText>(Resource.Id.editText_username);
             etPassword = FindViewById<EditText>(Resource.Id.editText_password);
             bLogin = FindViewById<Button>(Resource.Id.button_login);
 
+            // Attach the Click event handler to the login button
             bLogin.Click += LoginClicked;
         }
 
+
+        /// <summary>
+        /// Event handler for the login button click.
+        /// </summary>
         private void LoginClicked(object sender, EventArgs e)
         {
             string username = etUsername.Text;
@@ -43,7 +45,7 @@ namespace Elco
                 etUsername.Text = "";
                 etPassword.Text = "";
             }
-            else if (username == "admin" && password == "admin")
+            else if (etUsername.Text == "admin" && password == "admin")
             {
                 Toast.MakeText(this, "Login Successful", ToastLength.Long).Show();
 
@@ -57,6 +59,18 @@ namespace Elco
                 etUsername.Text = "";
                 etPassword.Text = "";
             }
+        }
+
+
+        /// <summary>
+        /// Called when the result of a permission request is received.
+        /// </summary>
+        /// <param name="requestCode">The code associated with the permission request.</param>
+        /// <param name="permissions">The requested permissions.</param>
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

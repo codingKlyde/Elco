@@ -59,9 +59,15 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivityDashboard.cs" />
-    <Compile Include="ActivityLogin.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Avtivity\ActivityDashboard.cs" />
+    <Compile Include="Avtivity\ActivityLogin.cs" />
+    <Compile Include="Avtivity\NavigationHeader.cs" />
+    <Compile Include="Resources\fragment\FragmentAccount.cs" />
+    <Compile Include="Resources\fragment\FragmentDashboard.cs" />
+    <Compile Include="Resources\fragment\FragmentAnnouncement.cs" />
+    <Compile Include="Avtivity\MainActivity.cs" />
+    <Compile Include="Resources\fragment\FragmentEvent.cs" />
+    <Compile Include="Resources\fragment\FragmentSetting.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,9 +81,6 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\app_bar_main.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\content_main.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\nav_header_main.xml">
@@ -149,6 +152,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_login.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_announcement.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_event.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_account.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_setting.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
