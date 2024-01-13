@@ -1,10 +1,13 @@
-﻿using Android.OS;
+﻿using Android.App;
+using Android.OS;
+using Android.Widget;
 using AndroidX.AppCompat.App;
+using Firebase.Auth;
 
-namespace Elco
+namespace Elco.Activity
 {
-    // [Activity(Label = "ActivityDashboard")]
-    public class ActivityDashboard : AppCompatActivity
+    [Activity(Label = "Dashboard Activity")]
+    public class NavigationHeader : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

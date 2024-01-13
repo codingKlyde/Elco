@@ -59,13 +59,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Avtivity\ActivityDashboard.cs" />
-    <Compile Include="Avtivity\ActivityLogin.cs" />
-    <Compile Include="Avtivity\NavigationHeader.cs" />
+    <Compile Include="Activity\ActivityLogin.cs" />
+    <Compile Include="Activity\NavigationHeader.cs" />
+    <Compile Include="DashboardViewModel.cs" />
     <Compile Include="Resources\fragment\FragmentAccount.cs" />
     <Compile Include="Resources\fragment\FragmentDashboard.cs" />
     <Compile Include="Resources\fragment\FragmentAnnouncement.cs" />
-    <Compile Include="Avtivity\MainActivity.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
     <Compile Include="Resources\fragment\FragmentEvent.cs" />
     <Compile Include="Resources\fragment\FragmentSetting.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -114,9 +114,27 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.0.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.6" />
+    <PackageReference Include="Xamarin.AndroidX.Browser">
+      <Version>1.7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4">
+      <Version>1.0.0.22</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData">
+      <Version>2.6.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Auth">
+      <Version>122.2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.10.0.2" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth">
+      <Version>120.7.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-v21\menu_setting24px.xml" />
@@ -174,6 +192,12 @@
     <AndroidResource Include="Resources\layout\activity_setting.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-v21\undraw_mobile_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\google50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
