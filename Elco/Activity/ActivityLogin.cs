@@ -14,7 +14,7 @@ using System;
 
 namespace Elco.Activity
 {
-    [Activity(MainLauncher = true, NoHistory = true)]
+    [Activity(Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, NoHistory = true)]
     public class ActivityLogin : AppCompatActivity, IOnSuccessListener, IOnFailureListener
     {
         GoogleSignInOptions gso;
@@ -28,12 +28,11 @@ namespace Elco.Activity
 
         Button bGoogleSignIn;
 
-        private DashboardViewModel viewModel;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_login);
+
             // Initialize Xamarin Essentials for platform-specific functionality
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
@@ -172,18 +171,24 @@ namespace Elco.Activity
 
         public void OnSuccess(Java.Lang.Object result)
         {
+            string storeUserID = firebaseAuth.CurrentUser.Uid;
             string storeName = firebaseAuth.CurrentUser.DisplayName;
             string storeEmail = firebaseAuth.CurrentUser.Email;
+            string storePhoneNumber = firebaseAuth.CurrentUser.PhoneNumber;
             string storePhotoURL = firebaseAuth.CurrentUser.PhotoUrl?.ToString(); // Handle null
-           
-            DashboardViewModel.Instance.SetName = storeName;
-            DashboardViewModel.Instance.SetEmail = storeEmail;
-            DashboardViewModel.Instance.SetPhotoURL = storePhotoURL;
+            long storeCreationTimestamp = firebaseAuth.CurrentUser.Metadata.CreationTimestamp;
+
+            AccountViewModel.Instance.SetUID = storeUserID;
+            AccountViewModel.Instance.SetName = storeName;
+            AccountViewModel.Instance.SetEmail = storeEmail;
+            AccountViewModel.Instance.SetPhoneNumber = storePhoneNumber;
+            AccountViewModel.Instance.SetPhotoURL = storePhotoURL;
+            AccountViewModel.Instance.SetCreationTimestamp = storeCreationTimestamp;
 
             Intent intent = new Intent(this, typeof(MainActivity));      
             StartActivity(intent);
 
-            Toast.MakeText(this, "Login successfully", ToastLength.Short).Show();
+            Toast.MakeText(this, "Login Successfully", ToastLength.Short).Show();
             UpdateUI();
         }
 
