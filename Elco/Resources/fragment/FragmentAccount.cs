@@ -31,7 +31,7 @@ namespace Elco
             string retrievPhotoURL = accountViewModel.SetPhotoURL;
             long retrieveCreationTimeStamp = accountViewModel.SetCreationTimestamp;
 
-            tvUserID .Text = retrieveUserID;
+            tvUserID.Text += retrieveUserID;
             tvName.Text += retrieveName;
             tvEmail.Text += retrieveEmail;
             tvPhoneNumber.Text += retrievePhoneNumber;
