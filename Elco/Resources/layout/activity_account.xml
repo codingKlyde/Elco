@@ -1,70 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:columnCount="2"
     android:orientation="vertical"
-    android:padding="16dp">
+    style="@style/ParentLayoutStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+    
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_UserID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="USER ID:"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="USER ID: "
+        style="@style/CustomTextViewStyle" />
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="NAME:"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="NAME: " 
+        android:id="@+id/textView_Name" 
+        style="@style/CustomTextViewStyle" />
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="E-MAIL:"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="E-MAIL: "
+        style="@style/CustomTextViewStyle" />
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_PhoneNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="PHONE NUMBER:"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="PHONE NUMBER: "
+        style="@style/CustomTextViewStyle" />
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_PhotoURL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PHOTO URL:"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-      <androidx.appcompat.widget.AppCompatTextView
+        android:text="PHOTO URL: "
+        style="@style/CustomTextViewStyle" />
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView_CreationTimestamp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:text="CREATED ON:"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        style="@style/CustomTextViewStyle" />
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:text="Sign in with google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_google_signin" />
+        android:id="@+id/button_google_signin" 
+        style="@style/CustomButtonStyle" />
 </GridLayout>

@@ -15,36 +15,27 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp" />
 
-
-    <androidx.cardview.widget.CardView
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/cardView1" />
-
-
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/editText_username"
             android:hint="Username"
-            android:inputType="text" />
+            android:inputType="text" 
+            style="@style/CustomEditTextStyle"
+            />
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/editText_password"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            style="@style/CustomEditTextStyle"/>
         <Button
-            android:text="Login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_login" />
+            android:text="Login"
+            android:id="@+id/button_login" 
+            style="@style/CustomButtonStyle" />
     </LinearLayout>
 
 

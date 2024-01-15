@@ -61,7 +61,7 @@
   <ItemGroup>
     <Compile Include="Activity\ActivityLogin.cs" />
     <Compile Include="Activity\NavigationHeader.cs" />
-    <Compile Include="DashboardViewModel.cs" />
+    <Compile Include="AccountViewModel.cs" />
     <Compile Include="Resources\fragment\FragmentAccount.cs" />
     <Compile Include="Resources\fragment\FragmentDashboard.cs" />
     <Compile Include="Resources\fragment\FragmentAnnouncement.cs" />
