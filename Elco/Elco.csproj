@@ -62,6 +62,7 @@
     <Compile Include="Activity\ActivityLogin.cs" />
     <Compile Include="Activity\NavigationHeader.cs" />
     <Compile Include="AccountViewModel.cs" />
+    <Compile Include="Adapter\AnnouncementAdapter.cs" />
     <Compile Include="Resources\fragment\FragmentAccount.cs" />
     <Compile Include="Resources\fragment\FragmentDashboard.cs" />
     <Compile Include="Resources\fragment\FragmentAnnouncement.cs" />
@@ -198,6 +199,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\google50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\announcement_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
