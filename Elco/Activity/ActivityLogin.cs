@@ -97,7 +97,9 @@ namespace Elco.Activity
             }
             else
             {
+
                 firebaseAuth.SignOut();
+                Toast.MakeText(this, "Sign out successful", ToastLength.Long).Show();
                 UpdateUI();
             }
            
@@ -206,7 +208,7 @@ namespace Elco.Activity
             }
             else
             {
-                bGoogleSignIn.Text = "Sign in with Google";
+                bGoogleSignIn.Text = "Google";
             }
         }
     }

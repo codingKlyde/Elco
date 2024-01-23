@@ -3,4 +3,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+
+
+	<!-- activity_login -->
+	<string name="username">Username</string>
+	<string name="password">Password</string>
+	<string name="login">Login</string>
 </resources>
